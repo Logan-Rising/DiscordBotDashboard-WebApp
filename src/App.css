@@ -158,6 +158,17 @@ body {
   .card:nth-child(4) {
     background-color: #d50000;
   }
+  .card:nth-child(5) {
+    background-color: #800000;
+  }
+
+  .card:nth-child(6) {
+    background-color: #008080;
+  }
+
+  .card:nth-child(7) {
+    background-color: #800080;
+  }
   
   .card-inner {
     display: flex;
@@ -225,3 +236,169 @@ body {
       display: none;
     }
   }
+
+ /* Button */
+ 
+ .button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.styled-button {
+  background-color: #007bff; /* Nice blue color */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Curved edges */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  flex-grow: 1; /* Make buttons grow to fill the available space */
+  text-align: center; /* Center the text within the button */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.styled-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+/* Home Grid */
+
+.home-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+  gap: 20px; /* Padding between boxes */
+  padding: 20px; /* Padding around the grid */
+  justify-content: center; /* Center the grid horizontally */
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: lime; /* Change background color to lime */
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 10px; /* Add padding inside the box */
+  box-sizing: border-box; /* Ensure padding is included in the box size */
+}
+
+.box:hover {
+  background-color: lightgreen; /* Slightly darker shade for hover effect */
+  transform: scale(1.05);
+}
+
+.box.open {
+  background-color: darkgreen; /* Change background color when open */
+  color: white; /* Change text color when open */
+}
+
+/* Responsive text sizes */
+.box span {
+  font-size: 2vw; /* Responsive font size based on viewport width */
+}
+
+.box.open span {
+  font-size: 1.5vw; /* Slightly smaller responsive font size when open */
+}
+
+/* Ensure minimum font size for accessibility */
+@media (max-width: 600px) {
+  .box span {
+    font-size: 16px; /* Minimum font size for smaller screens */
+  }
+
+  .box.open span {
+    font-size: 14px; /* Minimum font size for smaller screens */
+  }
+}
+
+/* Larger default font size for initialContent */
+.box.initial span {
+  font-size: 2.5vw; /* Larger default font size for initial content */
+}
+
+/* Feedback */
+
+* {
+  box-sizing: border-box;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.paragraph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragraph-input {
+  width: 80%; /* Set the width of the textarea */
+  height: 200px; /* Set the height of the textarea */
+  border-radius: 10px; /* Round the corners */
+  padding: 10px;
+  margin-bottom: 10px; /* Add some space between the textarea and button */
+}
+
+/* Timeline */
+/* src/Timeline.css */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px; /* Increased space between circles */
+}
+
+.timeline-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+.timeline-date,
+.timeline-title {
+  font-size: 1em;
+  color: black; /* Set text color to black */
+}
+
+.timeline-title {
+  margin-top: 5px;
+}
+
+.timeline-line {
+  width: 2px;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  top: 130px; /* Adjust this value based on circle height */
+}

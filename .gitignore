@@ -25,3 +25,8 @@ dist-ssr
 
 # Configuration file
 src/config.jsx
+
+# Firebase
+/.firebase
+.firebaserc
+firebase.json

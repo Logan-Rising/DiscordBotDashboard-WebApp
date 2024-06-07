@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header'
@@ -6,7 +6,9 @@ import Sidebar from './components/Sidebar'
 import Home from './components/Home'
 import Messaging from './components/Messaging'
 import Commands from './components/Commands'
-import { api_link } from './config'
+import Feedback from './components/Feedback'
+import Genus from './components/Genus'
+import AboutThisProject from './components/About'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -15,46 +17,20 @@ function App() {
     setOpenSidebarToggle(!openSidebarToggle)
   }
 
-  const [commandInfo, setCommandInfo] = useState();
-  const [imageInfo, setImageInfo] = useState();
-
-  useEffect(() => {
-    console.log('fetching data');
-    fetchData();
-  }, []);
-
-  // useEffect(() => {
-  //   console.log(imageInfo);
-  // }, [imageInfo]);
-  // useEffect(() => {
-  //   console.log(commandInfo);
-  // }, [commandInfo]);
-
-  async function fetchData() {
-    const commandsResponse = await fetch(api_link + '/api/commands');
-    const commands = await commandsResponse.json();
-    setCommandInfo(commands);
-
-    const imageResponse = await fetch(api_link + '/api/image');
-    const image = await imageResponse.json();
-    console.log('setting image info')
-    setImageInfo(image);
-
-    // const messagingResponse = await fetch(api_link + '/api/messaging');
-    // const messaging = await messagingResponse.json();
-  }
-
   return (
     <div className='grid-container'>
-      <BrowserRouter>
-        <Sidebar/>
-        <Header/>
+      <HashRouter>
+        <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+        <Header OpenSidebar={OpenSidebar}/>
         <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/messages' element={<Messaging/>} />
-              <Route path='/commands' element={<Commands commandInfo={commandInfo} imageInfo={imageInfo}/>} />
+              <Route path='/' element={<Home/>} />
+              <Route path='/messaging' element={<Messaging/>} />
+              <Route path='/commands' element={<Commands/>} />
+              <Route path='/genus' element={<Genus/>} />
+              <Route path='/about' element={<AboutThisProject/>} />
+              <Route path='/feedback' element={<Feedback/>} />
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }

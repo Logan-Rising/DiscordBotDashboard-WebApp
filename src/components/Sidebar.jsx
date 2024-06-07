@@ -1,67 +1,65 @@
 import React from 'react'
-import 
-{BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
-  BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
- from 'react-icons/bs'
  import { GiFamilyTree } from "react-icons/gi"
  import { MdOutlineMessage } from "react-icons/md"
  import { RiSlashCommands2 } from "react-icons/ri"
+ import { MdOutlineFeedback } from "react-icons/md";
+ import { CiCircleInfo } from "react-icons/ci";
  import { Link } from 'react-router-dom'
+ import logo from '../assets/logo.png';
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand'>
-                <BsCart3  className='icon_header'/> Sasquatch Bot
+            <img src={logo} style={{height: '20%', width: '15%', }}/> Sasquatch Bot
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
 
         <ul className='sidebar-list' >
-            <Link to='/' style={{ textDecoration: 'none' }}>
+            <Link to='/' style={{ textDecoration: 'none' }} onClick={{OpenSidebar}}>
                 <li className='sidebar-list-item'>
                     <a href="">
-                        <BsGrid1X2Fill className='icon'/> Dashboard
+                    <MdOutlineMessage className='icon'/> Dashboard
                     </a>
                 </li>
             </Link>
-            <Link to='/messages' style={{ textDecoration: 'none' }}>
+            <Link to='/messaging' style={{ textDecoration: 'none' }} onClick={{OpenSidebar}}>
                 <li className='sidebar-list-item'>
                     <a href="">
                     <MdOutlineMessage className='icon'/> Messaging
                     </a>
                 </li>
             </Link>
-            <Link to='/commands' style={{ textDecoration: 'none' }}>
+            <Link to='/commands' style={{ textDecoration: 'none' }} onClick={{OpenSidebar}}>
                 <li className='sidebar-list-item'>
                     <a href="">
                     <RiSlashCommands2 className='icon'/> Commands
                     </a>
                 </li>
             </Link>
-            <Link to='/genus' style={{ textDecoration: 'none' }}>
+            <Link to='/genus' style={{ textDecoration: 'none' }} onClick={{OpenSidebar}}>
                 <li className='sidebar-list-item'>
                     <a href="">
                     <GiFamilyTree className='icon'/> Genus
                     </a>
                 </li>
             </Link>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsListCheck className='icon'/> ...
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsMenuButtonWideFill className='icon'/> ...
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillGearFill className='icon'/> Setting
-                </a>
-            </li>
+            <Link to='/about' style={{ textDecoration: 'none' }} onClick={{OpenSidebar}}>
+                <li className='sidebar-list-item'>
+                    <a href="">
+                    <CiCircleInfo className='icon'/> About The Project
+                    </a>
+                </li>
+            </Link>
+            <Link to='/feedback' style={{ textDecoration: 'none' }} onClick={{OpenSidebar}}>
+                <li className='sidebar-list-item'>
+                    <a href="">
+                    <MdOutlineFeedback className='icon'/> Feedback
+                    </a>
+                </li>
+            </Link>
         </ul>
     </aside>
   )
