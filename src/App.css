@@ -51,6 +51,7 @@ body {
   .menu-icon {
     display: none;
   }
+  
   /* End Header  */
   
   /* Sidebar  */
@@ -238,34 +239,65 @@ body {
   }
 
  /* Button */
+
+ /* CSS */
+ .button-21 {
+   align-items: center;
+   appearance: none;
+   background-color: #3EB2FD;
+   background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+   background-size: calc(100% + 20px) calc(100% + 20px);
+   border-radius: 100px;
+   border-width: 0;
+   box-shadow: none;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   cursor: pointer;
+   display: inline-flex;
+   font-family: CircularStd,sans-serif;
+   font-size: 1rem;
+   height: auto;
+   justify-content: center;
+   line-height: 1.5;
+   padding: 6px 20px;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   transition: background-color .2s,background-position .2s;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: top;
+   white-space: nowrap;
+ }
  
- .button-container {
-  display: flex;
-  gap: 10px; /* Space between buttons */
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+ .button-21:active,
+ .button-21:focus {
+   outline: none;
+ }
+ 
+ .button-21:hover {
+   background-position: -20px -20px;
+ }
+ 
+ .button-21:focus:not(:active) {
+   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+ }
+
+ @media screen and (max-width: 600px) {
+  .button-21 {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
 }
 
-.styled-button {
-  background-color: #007bff; /* Nice blue color */
-  color: white;
-  border: none;
-  border-radius: 20px; /* Curved edges */
-  padding: 10px 20px; /* Padding inside the button */
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  flex-grow: 1; /* Make buttons grow to fill the available space */
-  text-align: center; /* Center the text within the button */
-  white-space: nowrap; /* Prevent text wrapping */
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+  .button-21 {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
 }
-
-.styled-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-
 
 /* Home Grid */
 
@@ -401,4 +433,20 @@ form {
   background-color: black;
   position: absolute;
   top: 130px; /* Adjust this value based on circle height */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
 }

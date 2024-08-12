@@ -162,7 +162,7 @@ function Commands() {
             <h3>COMMANDS</h3>
         </div>
 
-        <div className='main-cards' style={{ width: 'calc(100vw - 12rem)' }}>
+        <div className='main-cards'>
             <div className='card'>
                 <div className='card-inner'>
                     <h3>Total Commands Used</h3>

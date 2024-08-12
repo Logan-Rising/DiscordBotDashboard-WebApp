@@ -9,11 +9,13 @@ import Commands from './components/Commands'
 import Feedback from './components/Feedback'
 import Genus from './components/Genus'
 import AboutThisProject from './components/About'
+import CommandDocs from './components/CommandDocs'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
   const OpenSidebar = () => {
+    console.log('OpenSidebar called')
     setOpenSidebarToggle(!openSidebarToggle)
   }
 
@@ -24,6 +26,7 @@ function App() {
         <Header OpenSidebar={OpenSidebar}/>
         <Routes>
               <Route path='/' element={<Home/>} />
+              <Route path='/commanddocs' element={<CommandDocs/>}/>
               <Route path='/messaging' element={<Messaging/>} />
               <Route path='/commands' element={<Commands/>} />
               <Route path='/genus' element={<Genus/>} />

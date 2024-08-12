@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill} from 'react-icons/bs'
-import { CiCloudOn, CiCloudOff } from "react-icons/ci";
+import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill} from 'react-icons/bs';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { api_link } from '../config';
 
@@ -74,7 +73,7 @@ function Messaging() {
     let average = 0;
 
     for(let i = 6; i >= 0; i--) {
-      const priorDate = new Date(new Date().setDate(today.getDate() - ( i + 2 )))
+      const priorDate = new Date(new Date().setDate(today.getDate() - ( i + 1 )))
           .toISOString().slice(0, 10);
       const count = past7DaysMessageData[i] == null ? 0 : past7DaysMessageData[i].messages_read.index;
         messagesReadPast7Days.push( {
@@ -100,7 +99,7 @@ function Messaging() {
             <h3>Messaging</h3>
         </div>
 
-        <div className='main-cards' style={{ width: 'calc(100vw - 12rem)' }}>
+        <div className='main-cards'>
             <div className='card'>
                 <div className='card-inner'>
                     <h3>Messages Read</h3>

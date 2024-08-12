@@ -34,14 +34,18 @@ function Home() {
     {
       title: "Feedback",
       description: "For feedback or suggestion on the bot, use the suggestion command or fill out the suggestion form here."
-    }
+    },
+    {
+      title: "Translation",
+      description: "A translation command to convert text to different languages depicted by their ISO-639 code."
+    },
+    {
+      title: "Meme",
+      description: "A command to create a meme by adding text to an image either sent with the commmand or a replied to image."
+    },
   ];
 
   const upcomingFeatures = [
-    {
-      title: "Translation",
-      description: "A translation command will be added for servers that have members of different languages!"
-    },
     {
       title: "Tic-Tac-Toe vs. CPU",
       description: "Tic-Tac-Toe will be able to be played vs cpu in an upcoming update!"
@@ -51,8 +55,16 @@ function Home() {
       description: "Yahtzee will be added in a future update!"
     },
     {
-      title: "Checkers",
-      description: "Checkers will be added in a future update!"
+      title: "Giveaway",
+      description: "Giveaways will be able to be hosted in the next release!"
+    },
+    {
+      title: "Scheduled Messages",
+      description: "Messages will be able to be scheduled in a specified channel in the next release!"
+    },
+    {
+      title: "Polls",
+      description: "There will be a command coming soon to create a poll for a specified time period!"
     },
   ];
 
@@ -72,7 +84,7 @@ function Home() {
             <h3>DASHBOARD</h3>
         </div>
 
-        <div className='main-cards' style={{ width: 'calc(100vw - 12rem)' }}>
+        <div className='main-cards'>
             <div className='card'>
                 <div className='card-inner'>
                     <h3>Bot Status</h3>

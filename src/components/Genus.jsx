@@ -33,7 +33,7 @@ function Genus() {
     looking at now.  All these applications working together makes up the Discord Bot Genus. For more information on how each of the applications work,
     check out the <a href="#howitworks">How It Works</a> section below!</h4>
 
-        <img src={genus} alt="Discord Bot Genus" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '20%'}}></img>
+        <img src={genus} alt="Discord Bot Genus" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '30%'}}></img>
 
         <div className='main-title' id='howitworks'>
             <h2>How Does It Work?</h2>
@@ -41,7 +41,7 @@ function Genus() {
 
         <h3><u>How The Discord Bot Runs</u></h3>
         <h4>
-          At the core, the is a Discord Bot that is running on a server pc.  The Discord Bot is running using 
+          At the core, there is a Discord Bot that is running on a server pc.  The Discord Bot is running using 
           <a href="https://nodejs.org/en"> Node JS </a>
           in combination with
           <a href="https://discord.js.org/#/"> Discord JS </a>

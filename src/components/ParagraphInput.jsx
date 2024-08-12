@@ -32,7 +32,7 @@ function ParagraphInput() {
         className="paragraph-input"
         value={paragraph}
         onChange={handleChange}
-        placeholder="Type your input here..."
+        placeholder="Type your feedback here..."
       />
       <button className="styled-button" onClick={handleSubmit}>Submit</button>
     </div>

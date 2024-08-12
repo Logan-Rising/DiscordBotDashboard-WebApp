@@ -1,4 +1,3 @@
-// src/Timeline.js
 import React from 'react';
 
 const Timeline = () => {
@@ -8,7 +7,7 @@ const Timeline = () => {
     { date: 'July 2023', title: 'DiscordBot v2.0 Released' },
     { date: 'May 2024', title: 'REST API Released' },
     { date: 'May 2024', title: 'Web App Released' },
-    { date: 'May 2024', title: 'DiscordBot v3.0 Released'},
+    { date: 'August 2024', title: 'DiscordBot v3.0 Released'},
   ];
 
   return (
