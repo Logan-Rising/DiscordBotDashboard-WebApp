@@ -6,6 +6,7 @@ import React from 'react'
  import { CiCircleInfo } from "react-icons/ci";
  import { HiOutlineCommandLine } from "react-icons/hi2";
  import { LuLayoutDashboard } from "react-icons/lu";
+ import { FaDiscord } from "react-icons/fa";
  import { Link } from 'react-router-dom'
  import logo from '../assets/logo.png';
 
@@ -24,6 +25,13 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 <li className='sidebar-list-item'>
                     <a>
                     <LuLayoutDashboard className='icon'/> Dashboard
+                    </a>
+                </li>
+            </Link>
+            <Link to='/myserver' style={{ textDecoration: 'none' }} onClick={openSidebarToggle ? OpenSidebar : undefined}>
+                <li className='sidebar-list-item'>
+                    <a>
+                    <FaDiscord className='icon'/> My Server
                     </a>
                 </li>
             </Link>

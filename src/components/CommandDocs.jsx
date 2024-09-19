@@ -26,13 +26,23 @@ function AboutThisProject() {
     const adminCommandData = [
         {column1: 'addfilteredword', column2: '&addfilteredword <word>', column3: 'Add a filtered word from this server\'s filtered word list'},
         {column1: 'ban', column2: '&ban <@user or user id>', column3: 'Ban a user from the server'},
+        {column1: 'disablelogging', column2: '&disablelogging', column3: 'Disable logging for the current server'},
+        {column1: 'getuserviolations', column2: '&getuserviolations <@user or user id>', column3: 'Get a user\'s current number of filter violations'},
         {column1: 'kick', column2: '&kick <@user or user id>', column3: 'Kick a user from the server'},
+        {column1: 'mute', column2: '&mute <@user or user id>', column3: 'Mute a user in the server'},
         {column1: 'reactionrole', column2: '/reactionrole [role 1] [role 2] [role 3] [role 4] [role 5]', column3: 'Create a reaction role message to assign up to 5 roles to members'},
         {column1: 'removefilteredword', column2: '&removefilteredword <word>', column3: 'Remove a filtered word from this server\'s filtered word list'},
         {column1: 'resetfilteredwordslist', column2: '&resetfilteredwordslist', column3: 'Reset the filtered word list to an empty list'},
+        {column1: 'resetuserviolations', column2: '&resetuserviolations ', column3: 'Reset a user\'s filter violations back to zero'},
         {column1: 'setdefaultfilteredwords', column2: '&setdefaultfilteredwords', column3: 'Set this server\'s filtered word list to the default list. Use &viewdefaultfilteredwordlist to view the default filtered words'},
         {column1: 'setfiltersettings', column2: '&setfiltersettings <true/false>', column3: 'Set the filter settings for this server'},
+        {column1: 'setfilterviolationsmax', column2: '&setfilterviolationsmax <number>', column3: 'Set the violations limit before punishment is enforced'},
+        {column1: 'setlogchannel', column2: '&setlogchannel', column3: 'Run this command in the channel you want to set as the log channel for your server'},
+        {column1: 'setpenalty', column2: '&setpenalty <mute, kick, ban>', column3: 'Set the penalty for a user going over the max filter violations. Either, mute, kick, or ban'},
+        {column1: 'setuserviolations', column2: '&setuserviolations <@user or user id>', column3: 'Set the violations for a user'},
+        {column1: 'unmute', column2: '&unmute <@user or user id>', column3: 'Unmute a user in the server'},
         {column1: 'viewdefaultfilteredwordslist', column2: '&viewdefaultfilteredwordslist', column3: 'View the default filtered word list'},
+        {column1: 'setlogchannel', column2: '&setlogchannel', column3: 'Run this command in the channel you want to set as the log channel for your server'}
     ];
     
   return (

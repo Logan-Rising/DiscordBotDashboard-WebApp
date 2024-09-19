@@ -1,14 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import 
-{ BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill}
- from 'react-icons/bs'
+{ BsFillGrid3X3GapFill} from 'react-icons/bs'
  import { CiCloudOn, CiCloudOff } from "react-icons/ci";
- import 
- { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
- from 'recharts';
  import { api_link, bot_name } from '../config'
- import BoxGrid from './BoxGrid';
  import FeaturesSection from './FeaturesSection';
 
 function Home() {
@@ -61,10 +56,6 @@ function Home() {
     {
       title: "Scheduled Messages",
       description: "Messages will be able to be scheduled in a specified channel in the next release!"
-    },
-    {
-      title: "Polls",
-      description: "There will be a command coming soon to create a poll for a specified time period!"
     },
   ];
 

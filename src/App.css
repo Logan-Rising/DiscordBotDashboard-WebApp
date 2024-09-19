@@ -105,16 +105,10 @@ body {
   .sidebar-responsive {
     display: inline !important;
     position: absolute;
-    /*
-      we want the z-index of the sidebar higher so that
-      the charts are not showing over the sidebar 
-      on small screens
-    */
     z-index: 12 !important;
   }
   
   /* End Sidebar  */
-  
   
   /* Main  */  
   .main-container {
@@ -190,9 +184,6 @@ body {
   }
   
   /* End Main  */
-  
-  
-  /* Medium <= 992px */
     
   @media screen and (max-width: 992px) {
     .grid-container {
@@ -215,7 +206,6 @@ body {
       display: inline;
     }
   }
-  /* Small <= 768px */
     
   @media screen and (max-width: 768px) {
     .main-cards {
@@ -230,8 +220,6 @@ body {
     }
   }
   
-  /* Extra Small <= 576px */
-  
   @media screen and (max-width: 576px) {
     .hedaer-left {
       display: none;
@@ -240,7 +228,6 @@ body {
 
  /* Button */
 
- /* CSS */
  .button-21 {
    align-items: center;
    appearance: none;
@@ -291,7 +278,6 @@ body {
   }
 }
 
-/* Media query for larger screens */
 @media screen and (min-width: 1200px) {
   .button-21 {
     padding: 8px 20px;
@@ -303,10 +289,10 @@ body {
 
 .home-grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
-  gap: 20px; /* Padding between boxes */
-  padding: 20px; /* Padding around the grid */
-  justify-content: center; /* Center the grid horizontally */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .box {
@@ -314,48 +300,44 @@ body {
   align-items: center;
   justify-content: center;
   height: 100px;
-  background-color: lime; /* Change background color to lime */
+  background-color: lime;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  padding: 10px; /* Add padding inside the box */
-  box-sizing: border-box; /* Ensure padding is included in the box size */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .box:hover {
-  background-color: lightgreen; /* Slightly darker shade for hover effect */
+  background-color: lightgreen;
   transform: scale(1.05);
 }
 
 .box.open {
-  background-color: darkgreen; /* Change background color when open */
-  color: white; /* Change text color when open */
+  background-color: darkgreen;
+  color: white;
 }
 
-/* Responsive text sizes */
 .box span {
-  font-size: 2vw; /* Responsive font size based on viewport width */
+  font-size: 2vw;
 }
 
 .box.open span {
-  font-size: 1.5vw; /* Slightly smaller responsive font size when open */
+  font-size: 1.5vw;
 }
 
-/* Ensure minimum font size for accessibility */
 @media (max-width: 600px) {
   .box span {
-    font-size: 16px; /* Minimum font size for smaller screens */
+    font-size: 16px;
   }
 
   .box.open span {
-    font-size: 14px; /* Minimum font size for smaller screens */
+    font-size: 14px;
   }
 }
-
-/* Larger default font size for initialContent */
 .box.initial span {
-  font-size: 2.5vw; /* Larger default font size for initial content */
+  font-size: 2.5vw;
 }
 
 /* Feedback */
@@ -379,11 +361,11 @@ form {
 }
 
 .paragraph-input {
-  width: 80%; /* Set the width of the textarea */
-  height: 200px; /* Set the height of the textarea */
-  border-radius: 10px; /* Round the corners */
+  width: 80%;
+  height: 200px;
+  border-radius: 10px;
   padding: 10px;
-  margin-bottom: 10px; /* Add some space between the textarea and button */
+  margin-bottom: 10px;
 }
 
 /* Timeline */
@@ -400,7 +382,7 @@ form {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 50px; /* Increased space between circles */
+  margin-bottom: 50px;
 }
 
 .timeline-circle {
@@ -420,7 +402,7 @@ form {
 .timeline-date,
 .timeline-title {
   font-size: 1em;
-  color: black; /* Set text color to black */
+  color: black;
 }
 
 .timeline-title {
@@ -432,7 +414,7 @@ form {
   height: 50px;
   background-color: black;
   position: absolute;
-  top: 130px; /* Adjust this value based on circle height */
+  top: 130px;
 }
 
 table {
@@ -450,3 +432,191 @@ th, td {
 th {
   font-weight: bold;
 }
+
+/* Search Bar */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.search-form {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.info-container {
+  margin-left: 16px;
+}
+
+.info-button {
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.info-button:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: row;
+    padding: 0 10px;
+  }
+
+  .search-form {
+    flex: 1;
+    display: flex;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .info-button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .info-container {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+
+/* Info Button */
+
+.info-container {
+  position: relative;
+  display: inline-block;
+}
+
+.info-button {
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.info-button:hover {
+  color: #0056b3;
+}
+
+.info-box {
+  color:#1d2634;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #fff;
+  padding: 16px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.close-button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #c82333;
+}
+
+/* Error */
+
+.error {
+  color: red;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Side by side elements */
+
+.sbs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sbs-item {
+  width: 45%; 
+}
+

@@ -162,7 +162,6 @@ function Messaging() {
                 <Line type="monotone" dataKey="Average" stroke="#82ca9d" />
                 </LineChart>
             </ResponsiveContainer>
-
         </div>
     </main>
   )
